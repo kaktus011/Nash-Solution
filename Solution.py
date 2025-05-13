@@ -28,7 +28,7 @@ def solve_game():
     result_1 = linprog(c, A_ub=A_ub, b_ub=b_ub, bounds=(0, None), method="highs")
     
     if result_1.success:
-        probs_1 = result_1.x / sum(result_1.x)  # Вероятности за Играч 1
+        probs_1 = result_1.x / sum(result_1.x)
         print("Оптимални вероятности за Играч 1:", probs_1)
     else:
         print("Грешка при решаване на стратегията за Играч 1.")
